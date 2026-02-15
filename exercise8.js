@@ -15,6 +15,9 @@ const library = {
 
     listAllBooks() {
         this.books.forEach(book => console.log(book.title)); 
+    },
+    findBooksByAuthor(authorName) {
+        return this.books.filter(book => book.author === authorName);
     }
 };
 
@@ -34,3 +37,4 @@ universityLibrary.addCourseBook('CMPS2212', 'Eloquent JavaScript', 'Marijn Haver
 
 library.listAllBooks();
 console.log(library.findBookByTitle('1984'));
+console.log(library.findBooksByAuthor('George Orwell'));
